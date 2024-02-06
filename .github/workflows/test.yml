@@ -1,0 +1,10 @@
+name: Echo Branch Name
+run-name: echo-branch-name
+on:
+  pull_request:
+  merge_group:
+jobs:
+  echo-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.event.pull_request.head.ref }}"
